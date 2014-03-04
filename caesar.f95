@@ -15,7 +15,7 @@ call solve(so, 26)
 
 contains
  
-
+! upper case subroutines, changes a string to upper case
 subroutine toupper(x)
 character(len=*) :: x
 integer :: i
@@ -28,6 +28,7 @@ do i=1,len(x)
 end do
 end subroutine toupper
 
+! encrypt caesar cypher subroutine
 subroutine encrypt(str, shiftAmount)
 character(len=*) :: str
 integer :: shift, shiftAmount
@@ -47,6 +48,7 @@ end do
 print *,result
 end subroutine encrypt
 
+! decrypt caesar cypher subroutine
 subroutine decrypt(str, shiftAmount)
 character(len=*) :: str
 integer :: shift, i, shiftAmount
@@ -65,6 +67,7 @@ end do
 print *,result
 end subroutine decrypt
 
+! solve caesar cypher subroutine
 subroutine solve(str, maxShiftAmount)
 character(len=*) :: str
 integer :: i, maxShiftAmount
