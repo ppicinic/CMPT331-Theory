@@ -1,10 +1,17 @@
-PROGRAM ceaser
+! Caesar Cypher - Fortran 95
+! Phil Picinic
+PROGRAM caesar
 IMPLICIT NONE
-character(len=51) :: test = "This is a test from alan testing testing testing @!"
-call encrypt(test, 5)
-call decrypt(test, 2)
-call solve(test, 52)
-!PRINT *,test
+character(len=35) :: en1 = "This is a test from alan testing @!"
+character(len=21) :: en2 = "Check this code# !out"
+character(len=35) :: de1 = "Estd tD L EpDE QCzX LWlY EPDEtyr @!"
+character(len=21) :: de2 = "YdayG pdEO YkzA# !KqP"
+character(len=35) :: so = "MABL bL T MxLM YkHF TETG MxLMBgZ @!" 
+call encrypt(en1, 5)
+call encrypt(en2, 16)
+call decrypt(de1, 11)
+call decrypt(de2, 22)
+call solve(so, 26)
 
 contains
  
@@ -68,4 +75,4 @@ do i=maxShiftAmount,0,-1
 end do
 end subroutine solve
 
-end program ceaser
+end program caesar
