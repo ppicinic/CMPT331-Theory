@@ -3,7 +3,7 @@ program Hello;
 Uses sysutils;
 
 var
-	str, test: String;
+    str, res: String;
 	
 	function encrypt (str : String; shiftAmount : integer) : String;
 	var
@@ -77,14 +77,19 @@ var
 	end;
 
 begin (* Main *)
-	str := 'yolo this @! sup';
-	test := 'test';
-	test := encrypt(str, 2);
-	writeln(test);
-	test := decrypt(test, 2);
-	writeln(test);
-	test := encrypt(test, 14);
-	test := test;
-	solve(test, 26);
+	str := 'This is a test from alan testing @!';
+	res := encrypt(str, 5);
+	writeln(res);
+	str := 'Check this code# !out';
+	res := encrypt(str, 16);
+	writeln(res);
+	str := 'Estd tD L EpDE QCzX LWlY EPDEtyr @!';
+	res := decrypt(str, 11);
+	writeln(res);
+	str := 'YdayG pdEO YkzA# !KqP';
+	res := decrypt(str, 22);
+	writeln(res);
+	str := 'MABL bL T MxLM YkHF TETG MxLMBgZ @!';
+	solve(str, 26);
 end.
 
