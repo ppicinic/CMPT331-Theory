@@ -2,8 +2,8 @@ IDENTIFICATION DIVISION.
 PROGRAM-ID. HELLO-WORLD.
 DATA DIVISION.
 WORKING-STORAGE SECTION.
-01 mystring PIC X(100) VALUE "test! test".
-01 shift    PIC 9(8)   VALUE 2.
+01 mystring PIC X(100) VALUE "This is a test from alan testing @!".
+01 shift    PIC 9(8)   VALUE 5.
 01 maxshift PIC 9(8)   VALUE 26.
 01 maxc     PIC 9(8)   VALUE 26.
 01 temp     PIC X(100) VALUE " ".
@@ -15,16 +15,17 @@ WORKING-STORAGE SECTION.
 01 il       PIC 9(3)   VALUE 1.
 PROCEDURE DIVISION.
 Toplevel.
-    DISPLAY mystring.
     PERFORM Encrypt
-    MOVE "This is a new string " to mystring
+    MOVE "Check this code# !out" to mystring
+    MOVE 16 to shift
     PERFORM Encrypt
-    MOVE "wxyzabc" to mystring
-    MOVE 25 to shift
-    PERFORM Encrypt
-    MOVE "wxyzabc" to mystring
-    MOVE 25 to shift
+    MOVE "Estd tD L EpDE QCzX LWlY EPDEtyr @!" to mystring
+    MOVE 11 to shift
     PERFORM Decrypt
+    MOVE "YdayG pdEO YkzA# !KqP" to mystring
+    MOVE 22 to shift
+    PERFORM Decrypt
+    MOVE "MABL bL T MxLM YkHF TETG MxLMBgZ @!" to mystring
     PERFORM Solve
     STOP RUN.
 
