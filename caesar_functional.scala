@@ -1,3 +1,7 @@
+/** 
+*	Caesar Cypher - Scala (Functional)
+*	@author Phil Picinic
+*/
 def fixEncrypt(c: Char): Char =
 	if(c > 'Z') 'A' else c
 
@@ -29,8 +33,4 @@ def decrypt(str:String, shiftAmount: Int): String =
 	decryptHelp(str.toUpperCase(), shiftAmount)
 
 def solve(str: String, maxShiftValue:Int): String = 
-	if(maxShiftValue == 0) "CEASER " + 0 + ": " + str else "CEASER " + maxShiftValue + ": " + decrypt(str, maxShiftValue) + "\n" + solve(str, maxShiftValue - 1)
-
-/*println(encrypt("xyzabcde", 28));
-println(decrypt("xyzabcde", 2));
-println(solve("HAL", 26));*/
+	if(maxShiftValue == 0) "CAESER " + 0 + ": " + str else "CAESER " + maxShiftValue + ": " + decrypt(str, maxShiftValue) + "\n" + solve(str, maxShiftValue - 1)

@@ -1,3 +1,4 @@
+-- Caesar Cypher - Phil Picinic
 import Data.Char
 
 strToUpper str = map toUpper str
@@ -16,5 +17,5 @@ decrypt str shiftAmount = decrypthelper (strToUpper str) shiftAmount
         decryptOnce (x:xs) = if x >= 'A' then if x <= 'Z' then (fixDecrypt (chr(ord(x) - 1))) : decryptOnce(xs) else x : decryptOnce(xs) else x : decryptOnce(xs)
         fixDecrypt c = if c < 'A' then 'Z' else c
 
-solve str 0 = "CEASER 0: " ++ (decrypt str 0)
-solve str maxShiftValue = "CEASER " ++ (show maxShiftValue) ++ ": " ++ (decrypt str maxShiftValue) ++ "\n" ++ (solve str (maxShiftValue - 1))
+solve str 0 = "CAESER 0: " ++ (decrypt str 0)
+solve str maxShiftValue = "CAESER " ++ (show maxShiftValue) ++ ": " ++ (decrypt str maxShiftValue) ++ "\n" ++ (solve str (maxShiftValue - 1))

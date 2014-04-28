@@ -1,4 +1,5 @@
--module(ceaser).
+% Caesar Cypher - Phil Picinic
+-module(caeser).
 -export([encrypt/2,decrypt/2,solve/2]).
 
 encrypt(X, Y) ->
@@ -46,6 +47,6 @@ fixDecrypt(X)->
 	X.
 
 solve(X, 0) ->
-	"CEASER 0: " ++ decrypt(X, 0);
+	"CAESER 0: " ++ decrypt(X, 0);
 solve(X, Y) ->
-	"CEASER " ++ integer_to_list(Y) ++ ": " ++ decrypt(X, Y) ++ "\n" ++ solve(X, (Y-1)).
+	"CAESER " ++ integer_to_list(Y) ++ ": " ++ decrypt(X, Y) ++ "\n" ++ solve(X, (Y-1)).
