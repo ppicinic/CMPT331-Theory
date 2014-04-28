@@ -25,5 +25,5 @@ and
 fixDecrypt(c) = 
 	if c < #"A" then chr( 91 - (65 - ord(c)) ) else c;
 
-fun solve(str, 0) = concat("CAESER 0: " :: decrypt(str, 0) :: [])
-	| solve(str, maxShiftValue) = concat("CAESER " :: Int.toString(maxShiftValue) :: ": " :: decrypt(str, maxShiftValue) :: "\n" :: solve(str, (maxShiftValue - 1)) :: []) 
+fun solve(str, 0) = concat("CAESAR 0: " :: decrypt(str, 0) :: [])
+	| solve(str, maxShiftValue) = concat("CAESAR " :: Int.toString(maxShiftValue) :: ": " :: decrypt(str, maxShiftValue) :: "\n" :: solve(str, (maxShiftValue - 1)) :: []) 
